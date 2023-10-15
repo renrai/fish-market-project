@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishMarketProjectApi", "FishMarketProjectApi.csproj", "{0266BC92-1D4E-4321-AEEB-C803A393F325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishMarketProjectApi", "FishMarketProjectApi.csproj", "{0266BC92-1D4E-4321-AEEB-C803A393F325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishMarketProjectData", "..\FishMarketProjectData\FishMarketProjectData.csproj", "{9791756A-E820-47C9-92E0-72BAC2706615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishMarketProjectData", "..\FishMarketProjectData\FishMarketProjectData.csproj", "{9791756A-E820-47C9-92E0-72BAC2706615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishMarketProjectDomain", "..\FishMarketProjectDomain\FishMarketProjectDomain.csproj", "{5201BA50-EBCE-4FED-8871-46B534F6B555}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishMarketProjectDomain", "..\FishMarketProjectDomain\FishMarketProjectDomain.csproj", "{5201BA50-EBCE-4FED-8871-46B534F6B555}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishMarketProjectService", "..\FishMarketProjectService\FishMarketProjectService.csproj", "{AAB0FB62-28B8-4BC9-9700-0525DD013795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishMarketProjectService", "..\FishMarketProjectService\FishMarketProjectService.csproj", "{AAB0FB62-28B8-4BC9-9700-0525DD013795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishMarketTest", "..\FishMarketTest\FishMarketTest.csproj", "{5C9EA36C-88DC-48A5-9CE9-4F054283A066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AAB0FB62-28B8-4BC9-9700-0525DD013795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB0FB62-28B8-4BC9-9700-0525DD013795}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB0FB62-28B8-4BC9-9700-0525DD013795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C9EA36C-88DC-48A5-9CE9-4F054283A066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9EA36C-88DC-48A5-9CE9-4F054283A066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9EA36C-88DC-48A5-9CE9-4F054283A066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9EA36C-88DC-48A5-9CE9-4F054283A066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -34,7 +34,7 @@ namespace FishMarketProjectData.Database.Repositories
 
         #region Public Methods
 
-        public void Add(MODEL model)
+        public async Task Add(MODEL model)
         {
             var entity = _mapper.Map<ENTITY>(model);
             _db.Entry(entity).State = EntityState.Added;

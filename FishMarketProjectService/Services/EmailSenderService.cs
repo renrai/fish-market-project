@@ -11,10 +11,10 @@ namespace FishMarketProjectService.Services
 {
     public class EmailSenderService : IEmailSenderService
     {
-        private static string emailSender = "@outlook.com";
-        private static string emailSenderPass = "123456";
+        private static string emailSender = "fishmarkettoken@outlook.com";
+        private static string emailSenderPass = "fishmarket!";
 
-        public Task SendEmailAsync(string email, Guid token)
+        public Task SendEmailAsync(string email, string token)
         {
             var client = new SmtpClient("smtp-mail.outlook.com", 587)
             {

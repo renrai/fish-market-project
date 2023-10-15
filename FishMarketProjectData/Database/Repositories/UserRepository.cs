@@ -24,12 +24,18 @@ namespace FishMarketProjectData.Database.Repositories
             var emailRecordDb = await _context.Users.FirstOrDefaultAsync(a => a.Email.Equals(email));
             if(emailRecordDb == null) 
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            var userDb =  await _context.Users.FirstOrDefaultAsync(a => a.Email.Equals(email));
+            return _mapper.Map<User>(userDb);
         }
     }
 }

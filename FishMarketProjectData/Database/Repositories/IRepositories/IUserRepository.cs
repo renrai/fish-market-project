@@ -10,6 +10,7 @@ namespace FishMarketProjectData.Database.Repositories.IRepositories
     public interface IUserRepository : IRepositoryBase<User>
     {
         Task<bool> CheckIfEmailExistsDB(string email);
+        Task<User> GetUserByEmail(string email);
 
     }
 }

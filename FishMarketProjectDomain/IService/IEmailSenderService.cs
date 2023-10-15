@@ -8,6 +8,6 @@ namespace FishMarketProjectDomain.IService
 {
     public interface IEmailSenderService
     {
-        Task SendEmailAsync(string email, Guid token);
+        Task SendEmailAsync(string email, string token);
     }
 }

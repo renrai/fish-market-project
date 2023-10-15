@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using FishMarketProjectData.Database.Entities;
+using FishMarketProjectDomain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,8 @@ namespace FishMarketProjectData.Mapping
     {
         public MappingProfile()
         {
+            CreateMap<UserEntity, User>()
+            .ReverseMap();
         }
     }
 }

@@ -9,6 +9,11 @@ namespace FishMarketProjectDomain.IService
 {
     public interface IUserService
     {
-        Task<bool> RegisterUser(UserRegisterRequest user);
+        Task<bool> RegisterUser(UserRequest user);
+        Task<bool> ValidateToken(string email, string token);
+        Task<bool> ResendEmailVerification(string email);
+        Task<bool> Login(UserRequest user);
+
+
     }
 }

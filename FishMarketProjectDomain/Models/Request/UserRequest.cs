@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FishMarketProjectDomain.Models.Request
 {
-    public class UserRegisterRequest
+    public class UserRequest
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public required string Email { get; set; }
+        public required string Password { get; set; }
     }
 }

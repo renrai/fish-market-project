@@ -13,12 +13,14 @@ namespace FishMarketProjectData.Database.Repositories
 
         private readonly FishMarketContextDb _context;
         private IUserRepository _userRepository;
+        private IFishRepository _fishRepository;
 
         public UnitOfWork(FishMarketContextDb context)
         {
             _context = context;
         }
         public IUserRepository UserRepository => _userRepository ?? (_userRepository = new UserRepository(_context));
+        public IFishRepository FishRepository => _fishRepository ?? (_fishRepository = new FishRepository(_context));
 
         public int Commit()
         {

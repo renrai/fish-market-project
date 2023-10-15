@@ -37,9 +37,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient();
 
 //repositories
-builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IFishRepository, FishRepository>();
 //services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IFishService, FishService>();
+
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IEmailSenderService, EmailSenderService>();
 builder.Services.AddTransient<JWT>();

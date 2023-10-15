@@ -15,6 +15,8 @@ namespace FishMarketProjectData.Mapping
         {
             CreateMap<UserEntity, User>()
             .ReverseMap();
+            CreateMap<FishEntity, Fish>()
+            .ReverseMap();
         }
     }
 }

@@ -8,8 +8,8 @@ namespace FishMarketProjectData.Database.Entities
 {
     public class FishEntity : BaseEntity
     {
-        public string Specie { get; set; }
+        public string Specie { get; set; } = string.Empty;
         public float Price { get; set; }
-        public byte Photo { get; set; }
+        public byte[] Photo { get; set; } = new byte[0];
     }
 }

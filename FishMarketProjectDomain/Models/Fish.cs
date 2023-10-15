@@ -8,8 +8,8 @@ namespace FishMarketProjectDomain.Models
 {
     public class Fish : BaseModel
     {
-        public string Specie { get; set; }
+        public string Specie { get; set; } = string.Empty;
         public float Price { get; set; }
-        public byte Photo { get; set; }
+        public byte[] Photo { get; set; } = new byte[0];
     }
 }

@@ -14,9 +14,11 @@ namespace FishMarketProjectService.Services
     public class UserService : IUserService
     {
         private static IUnitOfWork _unitOfWork;
-        public UserService(IUnitOfWork unitOfWork)
+        private static IEmailSenderService _emailSenderService;
+        public UserService(IUnitOfWork unitOfWork, IEmailSenderService emailSenderService)
         {
             _unitOfWork = unitOfWork;
+            _emailSenderService = emailSenderService;
         }
         public async Task<bool> RegisterUser(UserRegisterRequest user)
         {
@@ -25,10 +27,14 @@ namespace FishMarketProjectService.Services
             if (emailAlreadyExist)
                 throw new ArgumentException("Email Already Exists! Go to Login");
 
-            var newUser = new User { Password = Cryptography.HashPassword(user.Password), Email = user.Email};
+            var newUser = new User { Password = Cryptography.HashPassword(user.Password), Email = user.Email, TokenVerification = Guid.NewGuid()};
 
             _unitOfWork.UserRepository.Add(newUser);
+
             _unitOfWork.Commit();
+
+            await _emailSenderService.SendEmailAsync(newUser.Email, newUser.TokenVerification);
+
             return true;
         }
     }

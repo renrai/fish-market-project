@@ -37,6 +37,7 @@ builder.Services.AddTransient<IUserRepository, UserRepository>();
 //services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<IEmailSenderService, EmailSenderService>();
 
 builder.Services.AddSwaggerGen(c =>
 {

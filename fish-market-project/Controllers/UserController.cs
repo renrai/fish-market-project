@@ -20,7 +20,7 @@ namespace fish_market_project.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterRequest userRegister)
         {
-
+            await _userService.RegisterUser(userRegister);
             return Ok(true);
         }
     }
